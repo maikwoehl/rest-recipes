@@ -112,7 +112,7 @@ class Router {
         }
         
         
-        // Compare route size with query size
+        // Calculate route size
         if (substr($this->query, -1) == "/")
             $routeListSize = sizeof($routeList);
         else 
@@ -129,8 +129,6 @@ class Router {
         foreach ($routeList as $i => $item) {
             // Tags should not be inspected
             if ($item != "ROOT" && $item != "END" && $item != "FULL_END") {
-                
-                //echo "\n$item - {$callQueryArray[$i]}\n";
                 // No empty items and only items who are in routeList and query
                 if (empty($item) || (strcasecmp($item, $callQueryArray[$i]) != 0))
                     return;
@@ -138,10 +136,8 @@ class Router {
         }
         
         // Populate variables
-        foreach ($varList as $i => $var) {
-            // ${$var} = ... not necessary
+        foreach ($varList as $i => $var)
             $parameters[] = $callQueryArray[$i];
-        }
         
         // Only call function if there was no other function call
         if (!$this->requestAccepted) {
