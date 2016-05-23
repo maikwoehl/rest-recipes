@@ -73,6 +73,7 @@ class Router {
         $varList = array(); // Variable Parts (index important)
         $parameters = array(); // Parameters who will be send to callable
         
+        // Explode route string
         $routeArray = explode("/", $route);
         
         //echo "route: ". $route."\n";
@@ -97,12 +98,14 @@ class Router {
             $routeList[] = "END";
         
         
-        
+        // Checks if query ends with "/" - important to distinguish between 
+        // '/recipe/' and '/recipe/<id>'
         if ($routeList[sizeof($routeList)-1] == "FULL_END") {
             if (strcasecmp(substr($this->query, -1), "/") != 0)
                 return;
         }
         
+        // See above
         if ($routeList[sizeof($routeList)-1] == "END") {
             if (strcasecmp(substr($this->query, -1), "/") == 0)
                 return;
@@ -115,9 +118,10 @@ class Router {
         else 
             $routeListSize = sizeof($routeList)-1;
         
-        
+        // Explode query
         $callQueryArray = explode("/", $this->query);
         
+        // Route and query should have the same length in the matter of elements
         if ($routeListSize+sizeof($varList) != sizeof($callQueryArray))
             return;
         
