@@ -1,23 +1,15 @@
 {
     "name": "maikwoehl/rest-recipes",
+    "description": "Collection of classes and scripts for REST apis",
     "type": "library",
-    "description": "REST classes and scripts collection",
-    "keywords": ["rest", "api", "router"],
-    "homepage": "https://github.com/maikwoehl/rest-recipes",
-    "license": "MIT",
     "authors": [
         {
-            "name": "Maik Wöhl"
+            "name": "Maik Woehl",
+            "email": "maik.woehl@googlemail.com"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "RestRecipes\\" : "RestRecipes/"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "master"
-        }
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.0"
     }
 }
