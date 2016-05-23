@@ -46,7 +46,7 @@ class Router {
      *  - /recipe/create/&lt;name&gt; (specific name for creation and id as response)
      *  - /recipe/&lt;id&gt;
      *  - /recipe/&lt;id&gt;/export
-     *  - /recipe/&lt;id&gt;/<someVar&gt;
+     *  - /recipe/&lt;id&gt;/&lt;someVar&gt;
      * 
      * 
      * @param string $route
