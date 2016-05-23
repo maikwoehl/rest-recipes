@@ -1,0 +1,9 @@
+{
+    "name": "maikwoehl/rest-recipes",
+    "version": "dev-master"
+    "autoload": {
+        "psr-4": {
+            "RestRecipes\\" : "RestRecipes/"
+        }
+    }
+}
