@@ -1,6 +1,15 @@
 {
     "name": "maikwoehl/rest-recipes",
-    "version": "dev-master",
+    "type": "library",
+    "description": "REST classes and scripts collection",
+    "keywords": ["rest", "api", "router"],
+    "homepage": "https://github.com/maikwoehl/rest-recipes",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maik Wöhl"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "RestRecipes\\" : "RestRecipes/"
