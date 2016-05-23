@@ -2,6 +2,7 @@
     "name": "maikwoehl/rest-recipes",
     "description": "Collection of classes and scripts for REST apis",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Maik Woehl",
