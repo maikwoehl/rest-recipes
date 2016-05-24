@@ -60,7 +60,7 @@ class Router {
         
         // Check if $routeFunction is a callable
         if (!is_callable($routeFunction)) {
-            throw new InvalidArgumentException("callback function is not a callable");
+            throw new \InvalidArgumentException("callback function is not a callable");
             return;
         }
         
@@ -144,5 +144,17 @@ class Router {
             call_user_func_array($routeFunction, $parameters);
             $this->requestAccepted = true;
         }
+    }
+    
+    /**
+     * Do possible last steps in the script related to the Router
+     * 
+     * @throw \RuntimeException if no API endpoint was called
+     * @return void
+     */
+    public function run() {
+        if (!$this->requestAccepted) {
+            throw new \RuntimeException("No API endpoint was called.");
+        }   
     }
 }

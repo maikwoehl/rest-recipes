@@ -54,3 +54,10 @@ function someFunc() {
 $app->route("/test/", "GET", someFunc);
 
 $app->route("/test/<name>", "GET", someFunc);
+
+
+try {
+    $app->run();
+} catch (RuntimeException $e) {
+    echo $e->getMessage();
+}
