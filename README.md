@@ -45,6 +45,12 @@ $app->route("/recipe/", "GET", function() {
 $app->route("/recipe/<id>", "GET", function($id) {
     
 });
+
+try {
+    $app->run();
+} catch (RuntimeException $e) {
+    // Show some information that no API endpoint was called
+}
 ```
 
 The default querySelector of the Router class is `$q`. You can call the api
