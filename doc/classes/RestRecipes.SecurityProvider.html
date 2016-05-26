@@ -144,19 +144,19 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-735068204"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-170592107"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-735068204" class="accordion-body collapse in">
+            <div id="namespace-170592107" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1572236811"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1426273135"></a>
                                 <a href="../namespaces/RestRecipes.html" style="margin-left: 30px; padding-left: 0">RestRecipes</a>
             </div>
-            <div id="namespace-1572236811" class="accordion-body collapse ">
+            <div id="namespace-1426273135" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -188,77 +188,11 @@
                                             </nav>
                     <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
 
-                    <h1><small>\RestRecipes</small>Router</h1>
-                    <p><em>Simple Router to create routes</em></p>
+                    <h1><small>\RestRecipes</small>SecurityProvider</h1>
+                    <p><em>Security Provider for checking authentication</em></p>
                     
                     
-                                                                        <h3>Examples</h3>
-                                                                            <h4>API in action</h4>
-                            <pre class="pre-scrollable">&lt;?php
-
-require_once &quot;RestRecipes/autoload.php&quot;;
-
-use RestRecipes\Router;
-
-$app = new Router();
-
-$app-&gt;route(&quot;/recipe/&quot;, &quot;GET&quot;, function() {
-    
-});
-
-$app-&gt;route(&quot;/recipe/create&quot;, &quot;POST&quot;, function() {
-    
-});
-
-$app-&gt;route(&quot;/recipe/create/&lt;name&gt;&quot;, &quot;POST&quot;, function($name) {
-    
-});
-
-$app-&gt;route(&quot;/recipe/&lt;id&gt;&quot;, &quot;GET&quot;, function() {
-    
-});
-
-$app-&gt;route(&quot;/recipe/&lt;id&gt;&quot;, &quot;PUT&quot;, function() {
-    
-});
-
-$app-&gt;route(&quot;/recipe/&lt;id&gt;&quot;, &quot;DELETE&quot;, function() {
-    
-});
-
-$app-&gt;route(&quot;/recipe/&lt;id&gt;/export&quot;, &quot;GET&quot;, function() {
-    
-});
-
-$app-&gt;route(&quot;/recipe/&lt;id&gt;/&lt;someVar&gt;&quot;, &quot;GET&quot;, function() {
-    
-});
-
-/* Complex stuff */
-
-function someFunc() {
-    
-    if (func_num_args &gt; 0) {
-        // Do stuff with $name
-        return;
-    }
-    
-    echo &quot;Some Content\n&quot;;
-    return;
-}
-
-$app-&gt;route(&quot;/test/&quot;, &quot;GET&quot;, someFunc);
-
-$app-&gt;route(&quot;/test/&lt;name&gt;&quot;, &quot;GET&quot;, someFunc);
-
-
-try {
-    $app-&gt;run();
-} catch (RuntimeException $e) {
-    echo $e-&gt;getMessage();
-}
-</pre>
-                                                                
+                                        
                     <section id="summary">
                         <h2>Summary</h2>
                         <section class="row-fluid heading">
@@ -274,15 +208,15 @@ try {
                         </section>
                         <section class="row-fluid public">
                             <section class="span4">
-                                                                    <a href="../classes/RestRecipes.Router.html#method___construct" class="">__construct()</a><br />
-                                                                    <a href="../classes/RestRecipes.Router.html#method_route" class="">route()</a><br />
-                                                                    <a href="../classes/RestRecipes.Router.html#method_run" class="">run()</a><br />
+                                                                    <a href="../classes/RestRecipes.SecurityProvider.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/RestRecipes.SecurityProvider.html#method_setHttpBasicAuthenticationCredentials" class="">setHttpBasicAuthenticationCredentials()</a><br />
+                                                                    <a href="../classes/RestRecipes.SecurityProvider.html#method_authenticate" class="">authenticate()</a><br />
                                                             </section>
                             <section class="span4">
                                                                     <em>No public properties found</em>
                                                             </section>
                             <section class="span4">
-                                                                    <em>No constants found</em>
+                                                                    <a href="../classes/RestRecipes.SecurityProvider.html#constant_AUTH_HTTP_BASIC" class="">AUTH_HTTP_BASIC</a><br />
                                                             </section>
                         </section>
                         <section class="row-fluid protected">
@@ -298,10 +232,10 @@ try {
                         </section>
                         <section class="row-fluid private">
                             <section class="span4">
-                                                                    <em>No private methods found</em>
+                                                                    <a href="../classes/RestRecipes.SecurityProvider.html#method_httpBasicAuthenticationHandler" class="">httpBasicAuthenticationHandler()</a><br />
                                                             </section>
                             <section class="span4">
-                                                                    <a href="../classes/RestRecipes.Router.html#property_requestAccepted" class="">$requestAccepted</a><br />
+                                                                    <em>No private properties found</em>
                                                             </section>
                             <section class="span4">
                                 <em>N/A</em>
@@ -314,12 +248,12 @@ try {
                     
                     <dl>
                         <dt>File</dt>
-                            <dd><a href="../files/Router.html"><div class="path-wrapper">Router.php</div></a></dd>
+                            <dd><a href="../files/SecurityProvider.html"><div class="path-wrapper">SecurityProvider.php</div></a></dd>
                                                 <dt>Package</dt>
                             <dd><div class="namespace-wrapper">RestRecipes</div></dd>
                                                 <dt>Class hierarchy</dt>
                             <dd class="hierarchy">
-                                                                                                                                                                    <div class="namespace-wrapper">\RestRecipes\Router</div>
+                                                                                                                                                                    <div class="namespace-wrapper">\RestRecipes\SecurityProvider</div>
                             </dd>
 
                         
@@ -334,32 +268,28 @@ try {
                 </aside>
             </div>
 
-                        
-                                    <a id="properties" name="properties"></a>
+                                    <a id="constants" name="constants"></a>
             <div class="row-fluid">
                 <div class="span8 content class">
-                    <h2>Properties</h2>
+                    <h2>Constants</h2>
                 </div>
                 <aside class="span4 detailsbar"></aside>
             </div>
 
-                                                                    <div class="row-fluid">
+                                <div class="row-fluid">
         <div class="span8 content class">
-            <a id="property_requestAccepted" name="property_requestAccepted" class="anchor"></a>
-            <article class="property">
-                <h3 class="private ">$requestAccepted</h3>
-                <pre class="signature">$requestAccepted : boolean</pre>
+            <a id="constant_AUTH_HTTP_BASIC" name="constant_AUTH_HTTP_BASIC" class="anchor"></a>
+            <article id="constant_AUTH_HTTP_BASIC" class="constant">
+                <h3 class="">AUTH_HTTP_BASIC</h3>
+                <pre class="signature">AUTH_HTTP_BASIC</pre>
                 <p><em></em></p>
                 
-
-                                <h4>Type</h4>
-                boolean
-                &mdash; Whether the request was accepted by a former handler                            </article>
+            </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                         <dl>
-                                                            </dl>
+                                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -368,6 +298,7 @@ try {
     </div>
 
                             
+                        
                                     <a id="methods" name="methods"></a>
             <div class="row-fluid">
                 <div class="span8 content class"><h2>Methods</h2></div>
@@ -380,15 +311,15 @@ try {
             <article class="method">
                 <h3 class="public ">__construct()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">__construct(string  <span class="argument">$querySelector = &quot;q&quot;</span>) </pre>
+                <pre class="signature" style="margin-right: 54px;">__construct(integer  <span class="argument">$authMethod = \RestRecipes\SecurityProvider::AUTH_HTTP_BASIC</span>) </pre>
                 <p><em>Constructor</em></p>
                 
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td>string</td>
-                                <td>$querySelector </td>
+                                <td>integer</td>
+                                <td>$authMethod </td>
                                 <td></td>
                             </tr>
                                             </table>
@@ -410,49 +341,28 @@ try {
 
                                     <div class="row-fluid">
         <div class="span8 content class">
-            <a id="method_route" name="method_route" class="anchor"></a>
+            <a id="method_setHttpBasicAuthenticationCredentials" name="method_setHttpBasicAuthenticationCredentials" class="anchor"></a>
             <article class="method">
-                <h3 class="public ">route()</h3>
+                <h3 class="public ">setHttpBasicAuthenticationCredentials()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">route(string  <span class="argument">$route</span>, string  <span class="argument">$method</span>, callable  <span class="argument">$routeFunction</span>) </pre>
-                <p><em>Routes a request to specific endpoint and extracts variables</em></p>
-                <p>A route must begin with '/'.</p>
-<p>The order of the parameters of the route and the parameters of the routeFunction
-should be the same.</p>
-<p>The order of routes must be in a order like:</p>
-<ul>
-<li>/recipe/</li>
-<li>/recipe/create (e.g. default data and id as response)</li>
-<li>/recipe/create/&lt;name&gt; (specific name for creation and id as response)</li>
-<li>/recipe/&lt;id&gt;</li>
-<li>/recipe/&lt;id&gt;/export</li>
-<li>/recipe/&lt;id&gt;/&lt;someVar&gt;</li>
-</ul>
+                <pre class="signature" style="margin-right: 54px;">setHttpBasicAuthenticationCredentials(string  <span class="argument">$username</span>, string  <span class="argument">$password</span>) </pre>
+                <p><em>Sets credentials for HTTP BASIC Authentication method</em></p>
+                
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
                                 <td>string</td>
-                                <td>$route </td>
+                                <td>$username </td>
                                 <td></td>
                             </tr>
                                                     <tr>
                                 <td>string</td>
-                                <td>$method </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td>callable</td>
-                                <td>$routeFunction </td>
+                                <td>$password </td>
                                 <td></td>
                             </tr>
                                             </table>
                 
-                                    <h4>Throws</h4>
-                    <dl>
-                                                    <dt>\InvalidArgumentException</dt>
-                            <dd><p>if $routeFunction is not a callable</p></dd>
-                                                                    </dl>
                 
                 				
                             </article>
@@ -470,22 +380,19 @@ should be the same.</p>
 
                                     <div class="row-fluid">
         <div class="span8 content class">
-            <a id="method_run" name="method_run" class="anchor"></a>
+            <a id="method_authenticate" name="method_authenticate" class="anchor"></a>
             <article class="method">
-                <h3 class="public ">run()</h3>
+                <h3 class="public ">authenticate()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">run() : void</pre>
-                <p><em>Do possible last steps in the script related to the Router</em></p>
+                <pre class="signature" style="margin-right: 54px;">authenticate() : boolean</pre>
+                <p><em>Checks authentication according auth $authMethod</em></p>
                 
 
                 
-                                    <h4>Throws</h4>
-                    <dl>
-                                                                            <dt>\RuntimeException</dt>
-                            <dd><p>if no API endpoint was called</p></dd>
-                                            </dl>
                 
-                				
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -499,16 +406,44 @@ should be the same.</p>
         </aside>
     </div>
 
-                                                                    </div>
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_httpBasicAuthenticationHandler" name="method_httpBasicAuthenticationHandler" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">httpBasicAuthenticationHandler()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">httpBasicAuthenticationHandler() : boolean</pre>
+                <p><em>Handles HTTP BASIC Authentication method</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    </div>
     </section>
 
     <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="source-view-label">Router.php</h3>
+            <h3 id="source-view-label">SecurityProvider.php</h3>
         </div>
         <div class="modal-body">
-            <pre data-src="../files/Router.php.txt" class="language-php line-numbers"></pre>
+            <pre data-src="../files/SecurityProvider.php.txt" class="language-php line-numbers"></pre>
         </div>
     </div>
 
