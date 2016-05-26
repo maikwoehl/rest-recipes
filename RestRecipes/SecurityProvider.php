@@ -18,6 +18,7 @@ namespace RestRecipes;
 class SecurityProvider {
     
     const AUTH_HTTP_BASIC = 0;
+    const AUTH_HTTP_VAR = 1;
     
     /**
      * Constructor
@@ -54,6 +55,27 @@ class SecurityProvider {
     }
     
     /**
+     * Sets credentials for HTTP VAR Authentication method
+     * 
+     * @param string $apikey
+     */
+    public function setHttpVarAuthenticationApikey($apikey) {
+        $this->httpVarApikey = $apikey;
+    }
+    
+    /**
+     * Handles HTTP VAR Authentication method
+     * 
+     * @return boolean
+     */
+    private function httpVarAuthenticationHandler() {
+        if ($_SERVER["HTTP_X_API_AUTH"] == $this->httpVarApikey)
+            return true;
+        else
+            return false;
+    }
+    
+    /**
      * Checks authentication according auth $authMethod
      * 
      * @return boolean
@@ -63,6 +85,9 @@ class SecurityProvider {
          switch ($this->authMethod) {
              case SecurityProvider::AUTH_HTTP_BASIC:
                 $result = $this->httpBasicAuthenticationHandler();
+                break;
+            case SecurityProvider::AUTH_HTTP_VAR:
+                $result = $this->httpVarAuthenticationHandler();
                 break;
          }
          
