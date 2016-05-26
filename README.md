@@ -32,7 +32,7 @@ The order of routes must be in a order like:
 
 require_once "RestRecipes/autoload.php";
 
-use RestRecipes/Router;
+use RestRecipes\Router;
 
 $app = new Router();
 
@@ -59,4 +59,54 @@ like this:
 ```
 GET api.php?q=/recipe/
 GET api.php?q=/recipe/3
+```
+
+
+## SecurityProvider
+
+The SecurityProvider allows to check certain security options.
+
+### Usage
+
+```php
+<?php
+/**
+ * api.php
+ *
+ * @version 0.1
+ *
+ */
+
+require_once "RestRecipes/autoload.php";
+
+use RestRecipes\Router;
+use RestRecipes\SecurityProvider;
+
+$security = new SecurityProvider(SecurityProvider::AUTH_HTTP_BASIC);
+$app = new Router();
+
+
+// Secure API route
+$app->route("/secure/", "GET", function() {
+    $security->setHttpBasicAuthenticationCredentials("user", "password");
+    
+    if (!$security->authenticate())
+        return false;
+});
+
+// Index
+$app->route("/recipe/", "GET", function() {
+    
+});
+
+// Detail
+$app->route("/recipe/<id>", "GET", function($id) {
+    
+});
+
+try {
+    $app->run();
+} catch (RuntimeException $e) {
+    // Show some information that no API endpoint was called
+}
 ```
