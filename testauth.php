@@ -2,9 +2,9 @@
 
 require_once "RestRecipes/autoload.php";
 
-use RestRecipes\SecurityProvider;
+use RestRecipes\AuthenticationProvider;
 
-$security = new SecurityProvider(SecurityProvider::AUTH_HTTP_VAR);
+$security = new AuthenticationProvider(AuthenticationProvider::AUTH_HTTP_VAR);
 
 $security->setHttpVarAuthenticationApikey("test");
 

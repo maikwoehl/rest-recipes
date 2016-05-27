@@ -69,7 +69,9 @@ class AuthenticationProvider {
      * @return boolean
      */
     private function httpVarAuthenticationHandler() {
-        if ($_SERVER["HTTP_X_API_AUTH"] == $this->httpVarApikey)
+        if ($_SERVER["HTTP_X_API_AUTH"] == $this->httpVarApikey
+            && !is_null($_SERVER["HTTP_X_API_AUTH"])
+            && isset($_SERVER["HTTP_X_API_AUTH"]))
             return true;
         else
             return false;
