@@ -62,9 +62,9 @@ GET api.php?q=/recipe/3
 ```
 
 
-## SecurityProvider
+## AuthenticationProvider
 
-The SecurityProvider allows to check certain security options.
+The AuthenticationProvider allows to check certain security options.
 
 ### Usage
 
@@ -80,9 +80,9 @@ The SecurityProvider allows to check certain security options.
 require_once "RestRecipes/autoload.php";
 
 use RestRecipes\Router;
-use RestRecipes\SecurityProvider;
+use RestRecipes\AuthenticationProvider;
 
-$security = new SecurityProvider(SecurityProvider::AUTH_HTTP_BASIC);
+$security = new AuthenticationProvider(AuthenticationProvider::AUTH_HTTP_BASIC);
 $app = new Router();
 
 
