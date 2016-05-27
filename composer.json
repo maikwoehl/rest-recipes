@@ -17,10 +17,5 @@
         "psr-4": {
             "RestRecipes\\": "RestRecipes/"
         }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "0.1.x-dev"
-        }
     }
 }
