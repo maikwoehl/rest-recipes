@@ -160,7 +160,7 @@ class Router {
      */
     public function run() {
         if (!$this->requestAccepted) {
-            throw new \RuntimeException("No API endpoint was called.");
+            throw new \RuntimeException("No API endpoint was called.", 404);
         }   
     }
 }

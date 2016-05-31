@@ -25,7 +25,7 @@ class AuthenticationProvider {
      * 
      * @param int $authMethod
      */
-    public function __construct($authMethod = SecurityProvider::AUTH_HTTP_BASIC) {
+    public function __construct($authMethod = AuthenticationProvider::AUTH_HTTP_BASIC) {
         $this->authMethod = $authMethod;
     }
     
@@ -85,10 +85,10 @@ class AuthenticationProvider {
      public function authenticate() {
          $result = false;
          switch ($this->authMethod) {
-             case SecurityProvider::AUTH_HTTP_BASIC:
+             case AuthenticationProvider::AUTH_HTTP_BASIC:
                 $result = $this->httpBasicAuthenticationHandler();
                 break;
-            case SecurityProvider::AUTH_HTTP_VAR:
+            case AuthenticationProvider::AUTH_HTTP_VAR:
                 $result = $this->httpVarAuthenticationHandler();
                 break;
          }
