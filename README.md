@@ -46,6 +46,12 @@ $app->route("/recipe/<id>", "GET", function($id) {
     
 });
 
+// Modify Object
+$app->route("/recipe/<id>", "PUT", function($id, $data) {
+    
+});
+
+
 try {
     $app->run();
 } catch (RuntimeException $e) {

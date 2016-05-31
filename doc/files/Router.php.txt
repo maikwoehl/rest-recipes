@@ -39,6 +39,9 @@ class Router {
      * The order of the parameters of the route and the parameters of the routeFunction
      * should be the same.
      * 
+     * If the route is a post or put endpoint, the last parameter of the 
+     * routeFunction will be the received body data of the request.
+     * 
      * The order of routes must be in a order like:
      * 
      *  - /recipe/
@@ -138,6 +141,9 @@ class Router {
         // Populate variables
         foreach ($varList as $i => $var)
             $parameters[] = $callQueryArray[$i];
+        
+        if ($_SERVER["REQUEST_METHOD"] == "PUT" || $_SERVER["REQUEST_METHOD"] == "POST")
+            $parameters[] = file_get_contents('php://input');
         
         // Only call function if there was no other function call
         if (!$this->requestAccepted) {

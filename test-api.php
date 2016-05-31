@@ -10,11 +10,11 @@ $app->route("/recipe/", "GET", function() {
     
 });
 
-$app->route("/recipe/create", "POST", function() {
+$app->route("/recipe/create", "POST", function($data) {
     
 });
 
-$app->route("/recipe/create/<name>", "POST", function($name) {
+$app->route("/recipe/create/<name>", "POST", function($name, $data) {
     
 });
 
@@ -22,7 +22,7 @@ $app->route("/recipe/<id>", "GET", function() {
     
 });
 
-$app->route("/recipe/<id>", "PUT", function() {
+$app->route("/recipe/<id>", "PUT", function($data) {
     
 });
 
